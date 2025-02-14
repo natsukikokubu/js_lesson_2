@@ -60,8 +60,7 @@ const [first, second, third] = arrayFn("React");
 console.log(third);
 
 // 問題 2
-function objectFn(arg) {
-  const { name } = arg;
+function objectFn({ name }) {
   console.log(name);
 }
 
