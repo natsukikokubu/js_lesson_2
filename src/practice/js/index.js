@@ -43,20 +43,17 @@ window.addEventListener("DOMContentLoaded", () => {
                 pokemonListElement.appendChild(listElement);
               })
               .catch((error) => {
-                console.error("Species情報取得エラー", error);
                 const errorMassage = createErrorElement(error);
                 errorMsg.appendChild(errorMassage);
               });
           })
           .catch((error) => {
-            console.error("ポケモン情報取得エラー", error);
             const errorMassage = createErrorElement(error);
             errorMsg.appendChild(errorMassage);
           });
       });
     })
     .catch((error) => {
-      console.error("ポケモン取得エラー", error);
       const errorMassage = createErrorElement(error);
       errorMsg.appendChild(errorMassage);
     });
