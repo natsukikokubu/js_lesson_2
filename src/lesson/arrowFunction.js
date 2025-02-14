@@ -11,5 +11,7 @@ const arrowFn = (num) => num * 10;
 //   return `Gizumo ${name}`;
 // };
 
-const testFn = (name) => `Gizumo ${name}`;
-console.log(testFn("gizumo"));
+const testFn = function (year, name) {
+  return `${year} : Gizumo ${name}`;
+};
+console.log(testFn("2015", "gizumo"));
