@@ -31,12 +31,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
                 // htmlの文字列を定義
                 const listItemHTML = `
-          <li class="list-item">
-            <div class="character">
-              <img src="${imgPath}" width="475" height="475" alt="${nameJa}" class="character__img">
-            </div>
-            <p class="character__name">${nameJa}</p>
-          </li>`;
+                <li class="list-item">
+                  <div class="character">
+                  <img src="${imgPath}" width="475" height="475" alt="${nameJa}" class="character__img">
+                  </div>
+                  <p class="character__name">${nameJa}</p>
+                </li>`;
                 // createElements 関数を利用して、生成したHTMLからDOM要素をを作成
                 const listElement = createElements(listItemHTML);
                 //ulの子要素として追加
@@ -56,14 +56,8 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((error) => {
-      console.log("ポケモン取得エラー", error);
+      console.error("ポケモン取得エラー", error);
       const errorMassage = createErrorElement(error);
-      console.log(errorMassage);
       errorMsg.appendChild(errorMassage);
     });
 });
-
-// const renderErrorElement = (error) => {
-//   const errorElement = createErrorElement(error);
-//   errorMsg.appendChild(errorElement);
-// }
