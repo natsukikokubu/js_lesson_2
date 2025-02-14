@@ -25,10 +25,8 @@ const array = [
   },
 ];
 
-const newArray2 = array.map((val) => {
-  return {
-    tag: val.tag,
-    className: "c-" + val.className,
-  };
-});
+const newArray2 = array.map((val) => ({
+  tag: val.tag,
+  className: "c-" + val.className,
+}));
 console.log(newArray2);
